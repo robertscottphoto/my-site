@@ -1,0 +1,352 @@
+
+//GLOBAL STYLING
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+//HEADER & NAVIGATION
+  #header {
+      width: 100vw;
+      height: 150px;
+      position: relative;       
+      z-index: 20;
+  }
+  .header-box {
+      position: fixed;
+      width: 100vw;
+      height: 150px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      padding-top: 10px;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      z-index: 1;
+      margin: 0;
+      .logo {
+          font-size: 1.4rem;
+          padding-left: 10px;
+      }
+      a:hover {
+        color: rgb(255, 58, 91);
+        transition: 200ms ease-in-out;
+      }
+  }
+  a {
+      text-decoration: none;
+      color: black;
+      transition: 200ms ease-in-out;
+  }
+  .nav  {
+      width: 360px;
+      font-weight: 600;
+  }
+  ul {
+      list-style: none;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-evenly;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      li {
+        padding: 10px 5px;
+        margin-top: 10px;
+      }
+  }
+  main {
+      width: 100%;
+  }
+  ///grid and items
+  .grid {
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      column-gap: 10px;
+      width: 100vw;
+      padding: 0px;
+      margin: 0px;
+  }
+  
+  .item {
+      max-width: 100%;
+      width: 450px;
+      height: 450px;
+      max-height: 100%;
+      overflow: hidden;
+      position: relative; ///////////////////////////relative position set here
+  }
+
+  .project-title {
+    font-size: 30px;
+    padding-bottom: 15%;
+  }
+
+  ///box background
+ .box-bg {
+  width: 100%;
+  position: absolute;
+  //top: 0;
+  //left: 0;
+  height: auto;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+////footer
+  footer {
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 20px;
+      font-size: 12px;
+  }
+
+ /* .item img:hover {
+    transform: scale(1.1);
+    filter: blur(20px) grayscale(30%);
+    transition: 300ms ease-in-out;
+  }
+*/
+
+
+//image styling
+
+
+  /*media queries*/
+  @media only screen and (min-width: 600px){
+    .header-box {
+        position: fixed;
+        width: 100vw;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        padding-top: 10px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 400;
+        z-index: 1;
+    
+    }
+
+    .grid {
+        row-gap: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .container {
+      width: 390px;
+      height: 390px;
+    }
+    .item {
+      width: 390px;
+      height: 390px;
+      margin-left: -60px;
+    }
+  }
+
+  //modal styling
+
+
+ 
+
+  .modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    top: 100px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+    &-bg {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+    }
+    &-container {
+      background: #fff;
+      position: relative;
+      padding: 30px;
+      height: 75vh;
+      width: 90vw;
+      overflow: auto;
+    }
+    &-close {
+      position: absolute;
+      right: 15px;
+      top: 0px;
+      font-size: 36px;
+      outline: none;
+      appearance: none;
+      color: rgb(0, 0, 0);
+      background: none;
+      border: 0px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  .container {
+    max-width: 100%;
+    width: 450px;
+    height: 450px;
+    max-height: 100%;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 300ms ease-in-out;
+    }
+    a:hover {
+      font-size: 30px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.616);
+      transition: 300ms ease-in-out;
+      opacity: 1;
+    }
+
+  }
+.flex-box {
+  width: auto;
+  height: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .flex-img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    //padding: 10px;
+  }
+
+  
+  h1 {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+//modal style ^^^^
+.about-container p {
+  padding: 20px;
+}
+
+ 
+
+.box-bg:hover {
+  opacity: 0.2;
+}
+
+///paragrph design
+p {
+  font-weight: 200;
+  width: 100%;
+  max-width: 600px;
+  padding: 50px 0px;
+}
+
+
+///////form styling
+.form-box {
+	width: 100%;
+  max-width: 380px;
+	margin: 50px auto;
+	padding: 40px 30px 30px 30px;
+	height: 300px;
+	//background: rgb(176, 255, 238);
+	//border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  border: rgba(0, 0, 0, 0.568) 2px solid;
+	
+}
+.contact-container {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 500px;
+  background-color: rgb(255, 255, 255);
+}
+form {
+	width: 100%;
+  max-width: 380px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+}
+
+
+.submit, label, input, textarea {
+	display: block;
+	width: 100%;
+  max-width: 380px;
+	padding: 5px;
+	margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.submit {
+	transition: 200ms ease;
+	width: 100%;
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+
+.submit:hover {
+color: white;
+background-color: rgb(255, 58, 91);
+transition: 200ms ease;
+border-radius: 1px;
+outline: 1px;
+outline-offset: 4px;
+}
+
+input:focus, textarea:focus, .submit:focus  {
+	outline: rgb(255, 58, 91) 2px solid;
+  border-style: none;
+  outline-offset: -1px;
+}
+
+textarea {
+	resize: none;
+}
+
+.modal-container > h3 {
+text-align: center;
+font-weight: 400;
+}
